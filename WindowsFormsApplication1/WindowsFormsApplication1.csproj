@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74227519-2193-4339-B931-1FB48C234B0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContinuousProgressWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContinuousProgressWindow.Designer.cs">
+      <DependentUpon>ContinuousProgressWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeTool.cs" />
+    <Compile Include="fmComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmComment.designer.cs">
+      <DependentUpon>fmComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmCustomerList.Designer.cs">
+      <DependentUpon>fmCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmEditSalesLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmEditSalesLine.Designer.cs">
+      <DependentUpon>fmEditSalesLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmItemList.Designer.cs">
+      <DependentUpon>fmItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmItemOrderAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmItemOrderAdd.Designer.cs">
+      <DependentUpon>fmItemOrderAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmMain.Designer.cs">
+      <DependentUpon>fmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmMyMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmMyMessageBox.designer.cs">
+      <DependentUpon>fmMyMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmSalesOrderHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmSalesOrderHeader.designer.cs">
+      <DependentUpon>fmSalesOrderHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmSalesOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmSalesOrderList.designer.cs">
+      <DependentUpon>fmSalesOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmSetup.designer.cs">
+      <DependentUpon>fmSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmStatistic.Designer.cs">
+      <DependentUpon>fmStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmTerminalPrinters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmTerminalPrinters.designer.cs">
+      <DependentUpon>fmTerminalPrinters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="ItemListClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\WarehouseService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSCustomerList\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSItemList\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSSalesCommentLines\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSSalesOrderHeader\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSSalesOrderLine\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSSalesOrderList\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSSalesStatistic\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSShipMethodCodes\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSTerminalPrinterListNew\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSWarehouseEmployee\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ContinuousProgressWindow.resx">
+      <DependentUpon>ContinuousProgressWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmComment.resx">
+      <DependentUpon>fmComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmCustomerList.resx">
+      <DependentUpon>fmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmEditSalesLine.resx">
+      <DependentUpon>fmEditSalesLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmItemList.resx">
+      <DependentUpon>fmItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmItemOrderAdd.resx">
+      <DependentUpon>fmItemOrderAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmMain.resx">
+      <DependentUpon>fmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmMyMessageBox.resx">
+      <DependentUpon>fmMyMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmSalesOrderHeader.resx">
+      <DependentUpon>fmSalesOrderHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmSalesOrderList.resx">
+      <DependentUpon>fmSalesOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmSetup.da-DK.resx">
+      <DependentUpon>fmSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmSetup.de-DE.resx">
+      <DependentUpon>fmSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmSetup.en-US.resx">
+      <DependentUpon>fmSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmSetup.resx">
+      <DependentUpon>fmSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmStatistic.resx">
+      <DependentUpon>fmStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmTerminalPrinters.resx">
+      <DependentUpon>fmTerminalPrinters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resources\Messages\Enum.da-DK.resx" />
+    <EmbeddedResource Include="Resources\Messages\Enum.de-DE.resx" />
+    <EmbeddedResource Include="Resources\Messages\Enum.en-US.resx" />
+    <EmbeddedResource Include="Resources\Messages\Message.da-DK.resx" />
+    <EmbeddedResource Include="Resources\Messages\Message.de-DE.resx" />
+    <EmbeddedResource Include="Resources\Messages\Message.en-US.resx" />
+    <None Include="Properties\DataSources\WindowsFormsApplication1.WSSalesOrderHeader.Sales_Order_Line.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\WarehouseService\BalanceWarehouse.wsdl" />
+    <None Include="Web References\WarehouseService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSCustomerList\CustomerListPage.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSCustomerList\CustomerListPage.wsdl" />
+    <None Include="Web References\WSCustomerList\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSItemList\ItemListPage.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSItemList\ItemListPage.wsdl" />
+    <None Include="Web References\WSItemList\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSSalesCommentLines\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSSalesCommentLines\SalesCommentLines.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSSalesCommentLines\SalesCommentLines.wsdl" />
+    <None Include="Web References\WSSalesOrderHeader\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSSalesOrderHeader\SalesOrderHeader.wsdl" />
+    <None Include="Web References\WSSalesOrderHeader\SalesOrderHeader1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSSalesOrderLine\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSSalesOrderLine\SalesOrderLine.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSSalesOrderLine\SalesOrderLine.wsdl" />
+    <None Include="Web References\WSSalesOrderList\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSSalesOrderList\SalesOrderList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSSalesOrderList\SalesOrderList.wsdl" />
+    <None Include="Web References\WSSalesStatistic\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSSalesStatistic\SalesStatistic.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSSalesStatistic\SalesStatistic.wsdl" />
+    <None Include="Web References\WSShipMethodCodes\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSShipMethodCodes\ShipmentMethodCode.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSShipMethodCodes\ShipmentMethodCode.wsdl" />
+    <None Include="Web References\WSTerminalPrinterListNew\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSTerminalPrinterListNew\TerminalPrinterList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSTerminalPrinterListNew\TerminalPrinterList.wsdl" />
+    <None Include="Web References\WSWarehouseEmployee\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSWarehouseEmployee\WarehouseEmployee.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSWarehouseEmployee\WarehouseEmployee.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pensil-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear-wheel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telescope-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailbox-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Codeunit/BalanceWarehouse">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WarehouseService\</RelPath>
+      <UpdateFromURL>http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Codeunit/BalanceWarehouse</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsFormsApplication1_WarehouseService_BalanceWarehouse</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/CustomerListPage">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSCustomerList\</RelPath>
+      <UpdateFromURL>http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/CustomerListPage</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsFormsApplication1_WSCustomerList_CustomerListPage_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/ItemListPage">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSItemList\</RelPath>
+      <UpdateFromURL>http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/ItemListPage</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsFormsApplication1_WSItemList_ItemListPage_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/SalesCommentLines">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSSalesCommentLines\</RelPath>
+      <UpdateFromURL>http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/SalesCommentLines</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsFormsApplication1_WSSalesCommentLines_SalesCommentLines_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/SalesOrderHeader">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSSalesOrderHeader\</RelPath>
+      <UpdateFromURL>http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/SalesOrderHeader</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsFormsApplication1_WSSalkesOrderHeader_SalesOrderHeader_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/SalesOrderLine">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSSalesOrderLine\</RelPath>
+      <UpdateFromURL>http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/SalesOrderLine</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsFormsApplication1_WSSalesOrderLine_SalesOrderLine_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/SalesOrderList">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSSalesOrderList\</RelPath>
+      <UpdateFromURL>http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/SalesOrderList</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsFormsApplication1_WSSalesOrderList_SalesOrderList_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/SalesStatistic">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSSalesStatistic\</RelPath>
+      <UpdateFromURL>http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/SalesStatistic</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsFormsApplication1_WSSalesStatistic_SalesStatistic_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/ShipmentMethodCode">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSShipMethodCodes\</RelPath>
+      <UpdateFromURL>http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/ShipmentMethodCode</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsFormsApplication1_WSShipMethodCodes_ShipmentMethodCode_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/TerminalPrinterList">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSTerminalPrinterListNew\</RelPath>
+      <UpdateFromURL>http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/TerminalPrinterList</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsFormsApplication1_WSTerminalPrinterListNew_TerminalPrinterList_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/WarehouseEmployee">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSWarehouseEmployee\</RelPath>
+      <UpdateFromURL>http://mail.akudim.dk:7047/UDVIKLING/WS/AKUDIM/Page/WarehouseEmployee</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WindowsFormsApplication1_WSWarehouseEmployee_WarehouseEmployee_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animatedCircle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NAV4Trade.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
